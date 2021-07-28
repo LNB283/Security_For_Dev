@@ -3,6 +3,10 @@ We cover a set of essential points to improve the security on Server side , Clie
 ## Server Side
 ## Client Side
 ## Repository
+|Item | Description| 
+| -------------- | :--------- |
+|Sensitive information|Verify there are **no** *secrets*,*credentials*,*passwords*,*passphrases* stored in the project's source code repository|
+|Vulnerability review|Verify there are **no** vulnerabilities rated **Medium** (CVSS >4) or above in any 3rd party, including open-source and/or code we use|
 ## 3rd Party
 |Item | Description| 
 | -------------- | :--------- |
