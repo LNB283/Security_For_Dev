@@ -29,6 +29,16 @@ We cover a set of essential points to improve the security on Server side , Clie
 |Sensitive Information|Do not point CNAMEs under your domains to a third-party.The basic premise of a subdomain takeover is a host that points to a particular service not currently in use, which an adversary can use to serve content on the vulnerable subdomain by setting up an account on the third-party service. **Please note** that having a CNAME that points to a third-party service is NOT inherently a security vulnerability.|[Link](https://www.hackerone.com/blog/Guide-Subdomain-Takeovers)|
 |3rd Party JS|We have verified that no proxying of third-party sites (or content) under the your domains occurs|[Link](https://www.owasp.org/index.php/3rd_Party_Javascript_Management_Cheat_Sheet)|
 |Cookies|The domain and path settings on the cookie are correctly configured to not send the cookie to other subdomains and/or on paths that don't require it|[Link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)|
+|Access Control|We have verified that only authenticated users can make any successful request to any endpoints in the project|[Link](https://www.owasp.org/index.php/Forced_browsing)|
+|Sensitive Information|We have verified that any email collected is verified before being trusted for use|N/A|
+|User Exp.|**If Applicable** We have verified that any user action which should only be performed by a limited number of users, cannot be performed by other users|N/A|
+|Logs|We have verified Carriage Return and Line Feed characters are sanitized prior to being written to logs (Prevent CLRF injection)|[Link](https://www.owasp.org/index.php/Log_Injection)|
+|Logging|Logging **must be** well-formatted (standard libraries), limited to only exact values required (no logging of unknown contents, full objects which could contain sensitive information, etc) and free of any sensitive information.||
+|URL Format|To prevent Homograph attack, we have verified that all URLs that contain mixed language characters are expanded to their punycode versions before being returned to clients|N/A|
+|Sensitive Information|We have verified that all test code, debug code, default code documentation, unnecessary code, jokes, etc. have all been removed from the final code/app|N/A|
+|Design|We have fuzzed all route/paths and parameters to verify that no errors/responses contain unintended functionality|N/A|
+|Design|We have rate-limited requests to all endpoints by IP and/or session, to prevent abuse and denial of service attacks|[Link](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)|
+|Privacy|We have verified that all deleted items (messages, photos, profile updates, etc) are immediately made inaccessible to all users, so they cannot have any CRUD operations performed on them.|N/A|
 
 ## Client Side
 |Item | Description| 
