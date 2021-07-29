@@ -3,20 +3,18 @@ We cover a set of essential points to improve the security on Server side , Clie
 ## Server Side
 |Item | Description| Reference|
 | -------------- | :--------- |:--------- |
-|Input Validation|Restricting the size of inputs helps to directly prevent issues such as buffer overflows, resource exhaustion  and/or denial of service. Further, inputs which are properly size limited can indirectly prevent other types of attacks, as they can prevent attackers from being able to fully develop their malicious input. Examples of inputs are headers, cookies, POST/GET parameters, file uploads, etc.|https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html|
+|Input Validation|Restricting the size of inputs helps to directly prevent issues such as buffer overflows, resource exhaustion  and/or denial of service. Further, inputs which are properly size limited can indirectly prevent other types of attacks, as they can prevent attackers from being able to fully develop their malicious input. Examples of inputs are headers, cookies, POST/GET parameters, file uploads, etc.|[Link](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html)|
 |Data Type Validation|The most common web application security weakness is the failure to properly validate input from the client or environment. This weakness leads to almost all of the major vulnerabilities in applications, such as Interpreter Injection, locale/Unicode attacks, file system attacks and buffer overflows. Data from the client should never be trusted for the client has every possibility to tamper with the data.|https://www.owasp.org/index.php/Data_Validation|
 |File Type Validation|**If Applicable** Magic numbers give you a more robust way to verify the filetype. Never rely on file extension, as this can be easily spoofed. The file types allowed to be uploaded should be restricted to only those that are necessary for business functionality.|https://www.owasp.org/index.php/Unrestricted_File_Upload|
 |Pattern Validation|The most common web application security weakness is the failure to properly validate input from the client or environment. 
-This weakness leads to almost all of the major vulnerabilities in applications, such as Interpreter Injection, locale/Unicode attacks, file system attacks and buffer overflows. Data from the client should never be trusted for the client has every possibility to tamper with the data.
-
-Note: Use of parsers is typically preferred over regular expressions||
+This weakness leads to almost all of the major vulnerabilities in applications, such as Interpreter Injection, locale/Unicode attacks, file system attacks and buffer overflows. Data from the client should never be trusted for the client has every possibility to tamper with the data.Note: Use of parsers is typically preferred over regular expressions|N/A|
 |Numbers Input|Application should limit the quantity of inputs they accept to only what is needed. Developers need to be careful when extracting parameters from requests,
  too many or duplicate parameters may cause unexpected application behaviors, which can result in security issues.|https://www.owasp.org/index.php/Testing_for_HTTP_Parameter_pollution_(OTG-INPVAL-004)|
  |Accepted Characters|Limit the set of acceptable characters for each user-supplied input to only what is specifically expected. Failure to do so opens an application up to various types of attack, particularly when control characters are allowed.|https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html|
  |File metadata|**If Applicable** File metadata is generally provided by the transport, such as HTTP multi-part encoding. You must validate the metadata extremely carefully before using it.|https://wp-rocket.me/blog/image-metadata-can-impact-web-performance-security/|
  |URL Validation|Avoid use of incompletely specified endswith(domain.com), to prevent foodomain.com, and startswith(domain.com) to prevent domain.comfoo.com abuse|https://mathiasbynens.be/demo/url-regex
 https://gist.github.com/gruber/8891611|
-|Encryption|**All URLs exclusively use HTTPS**||
+|Encryption|**All URLs exclusively use HTTPS**|N/A|
 |Encryption|HTTP Strict Transport Security (also named HSTS) is an opt-in security enhancement that is specified by a web application through the use of a special response header.
  Once a supported browser receives this header that browser will prevent any communications from being sent over HTTP to the specified domain and will
  instead send all communications over HTTPS. |https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html|
