@@ -40,6 +40,7 @@ We cover a set of essential points to improve the security on Server side , Clie
 |Design|We have rate-limited requests to all endpoints by IP and/or session, to prevent abuse and denial of service attacks|[Link](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html)|
 |Privacy|We have verified that all deleted items (messages, photos, profile updates, etc) are immediately made inaccessible to all users, so they cannot have any CRUD operations performed on them.|N/A|
 
+
 ## Client Side
 |Item | Description| 
 | -------------- | :--------- |
@@ -60,6 +61,7 @@ We cover a set of essential points to improve the security on Server side , Clie
 |Vulnerability review|Verify there are **no** vulnerabilities rated **Medium** (CVSS >4) or above in any 3rd party, including open-source and/or code we use|
 |Design|Verify that any use of the Window.postMessage function is implemented securely|
 |Design|Verify that all users are required to confirm any state changing or redirect action before it proceeds|
+|Check npm package|Bundlephobia help dev to determine the performance impactof adding npm package to front-end byndle|[Link](https://bundlephobia.com)|
 --------------------------
 ## Repository
 |Item | Description| 
