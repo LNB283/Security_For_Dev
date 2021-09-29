@@ -61,7 +61,7 @@ We cover a set of essential points to improve the security on Server side , Clie
 |Vulnerability review|Verify there are **no** vulnerabilities rated **Medium** (CVSS >4) or above in any 3rd party, including open-source and/or code we use|
 |Design|Verify that any use of the Window.postMessage function is implemented securely|
 |Design|Verify that all users are required to confirm any state changing or redirect action before it proceeds|
-|Check npm package|Bundlephobia help dev to determine the performance impactof adding npm package to front-end byndle - [Link](https://bundlephobia.com)|
+|Check npm package|Bundlephobia help dev to determine the performance impactof adding npm package to front-end - [Link](https://bundlephobia.com)|
 --------------------------
 ## Repository
 |Item | Description| 
